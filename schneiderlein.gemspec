@@ -7,11 +7,11 @@ require "schneiderlein/version"
 Gem::Specification.new do |s|
   s.name        = "schneiderlein"
   s.version     = Schneiderlein::VERSION
-  s.authors     = ["Carsten Zimmermann"]
-  s.email       = ["cz@aegisnet.de"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Schneiderlein."
-  s.description = "TODO: Description of Schneiderlein."
+  s.authors     = ["Carsten Zimmermann", "Robin Neumann"]
+  s.email       = ["cz@aegisnet.de", "robin.neumann@absolventa.de"]
+  s.homepage    = "https://github.com/Absolventa/schneiderlein"
+  s.summary     = "Rack middleware that rescues from ActionDispatch::ParamsParser"
+  s.description = "Rescues from ActionDispatch::ParamsParser and continues in middleware stack"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
