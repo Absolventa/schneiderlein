@@ -1,4 +1,4 @@
-class FridayHugsController
+class FridayHugsController < ApplicationController
 
   def create
     render text: params.inspect + "\n"
