@@ -5,6 +5,14 @@ RSpec.describe Schneiderlein::Catch do
   let(:request) { double(env: {}) }
   subject { described_class.new request }
 
+  shared_context 'with rack errors' do
+    let(:errors) { ['hello world'] }
+
+    before do
+      request.env['rack.schneiderlein.parse_errors'] = errors
+    end
+  end
+
   describe '#initialize' do
     it 'sets requests' do
       subject = described_class.new request
@@ -20,10 +28,9 @@ RSpec.describe Schneiderlein::Catch do
     end
 
     context 'with errors' do
-      it 'returns a list of error messages' do
-        errors = ['hello world']
-        request.env['rack.schneiderlein.parse_errors'] = errors
+      include_context 'with rack errors'
 
+      it 'returns a list of error messages' do
         expect(subject.to_a).to eql errors
       end
     end
@@ -37,10 +44,9 @@ RSpec.describe Schneiderlein::Catch do
     end
 
     context 'with errors' do
-      it 'concatenates the errors' do
-        errors = ['hello world']
-        request.env['rack.schneiderlein.parse_errors'] = errors
+      include_context 'with rack errors'
 
+      it 'concatenates the errors' do
         expect(subject.to_s).to eql errors.join(' ')
       end
     end
