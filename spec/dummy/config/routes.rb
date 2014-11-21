@@ -1,4 +1,3 @@
 Rails.application.routes.draw do
-
-  mount Schneiderlein::Engine => "/schneiderlein"
+  resources :friday_hugs, only: :create
 end
