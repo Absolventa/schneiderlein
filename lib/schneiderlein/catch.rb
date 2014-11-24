@@ -10,6 +10,8 @@ module Schneiderlein
       request.env.fetch('rack.schneiderlein.parse_errors', [])
     end
 
+    alias errors to_a
+
     def to_s
       to_a.join ' '
     end

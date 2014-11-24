@@ -20,6 +20,22 @@ RSpec.describe Schneiderlein::Catch do
     end
   end
 
+  describe '#errors' do
+    context 'without errors' do
+      it 'returns an empty list' do
+        expect(subject.errors).to be_empty
+      end
+    end
+
+    context 'with errors' do
+      include_context 'with rack errors'
+
+      it 'returns a list of error messages' do
+        expect(subject.errors).to eql errors
+      end
+    end
+  end
+
   describe '#to_a' do
     context 'without errors' do
       it 'returns an empty list' do
