@@ -13,6 +13,8 @@ require "schneiderlein"
 
 module Dummy
   class Application < Rails::Application
+    config.secret_key_base = '07d23de20e4a909c2054110a23a5c2d5adf916466171ebd81dd980bb91e54953d8bb9559a11c33a9f695fe0ffcc34459c8fd8e554feb6b31635b8008916b9101'
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
