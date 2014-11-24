@@ -1,6 +1,7 @@
 module Schneiderlein
   class Catch
-    delegate :empty?, to: :errors
+    delegate :any?, :empty?, to: :errors
+
     attr_reader :request
 
     def initialize(request)

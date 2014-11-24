@@ -20,6 +20,18 @@ RSpec.describe Schneiderlein::Catch do
     end
   end
 
+  describe '#any?' do
+    it 'returns true if errors are any' do
+      allow(subject).to receive(:errors).and_return []
+      expect(subject).not_to be_any
+    end
+
+    it 'returns false if errors are present' do
+      allow(subject).to receive(:errors).and_return %w(stuff went pear-shaped)
+      expect(subject).to be_any
+    end
+  end
+
   describe '#empty?' do
     it 'returns true if errors are empty' do
       allow(subject).to receive(:errors).and_return []
