@@ -4,7 +4,8 @@ module Schneiderlein
       begin
         app.call(env)
       rescue ActionDispatch::ParamsParser::ParseError => e
-        env['rack.schneiderlein.parse_errors'] = Array(e.message)
+        env['rack.schneiderlein.parse_errors'] ||= []
+        env['rack.schneiderlein.parse_errors'] << e
         app.call(remove_errors_from(env))
       end
     end
