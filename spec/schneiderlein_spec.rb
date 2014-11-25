@@ -16,9 +16,10 @@ RSpec.describe Schneiderlein do
     end
 
     it 'stores the exception message in a Rack variable' do
-      expected = "795: unexpected token at '{ foo: }'"
       request_json!
-      expect(request.env['rack.schneiderlein.parse_errors']).to eql [expected]
+      expect(request.env['rack.schneiderlein.parse_errors']).to be_a Array
+      expect(request.env['rack.schneiderlein.parse_errors'].size).to eql 1
+      expect(request.env['rack.schneiderlein.parse_errors'].first).to be_a ActionDispatch::ParamsParser::ParseError
     end
 
     def request_json!(json = nil)

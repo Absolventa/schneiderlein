@@ -15,7 +15,7 @@ module Schneiderlein
     alias errors to_a
 
     def to_s
-      to_a.join ' '
+      to_a.map(&:to_s).join ' '
     end
   end
 end
