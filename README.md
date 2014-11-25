@@ -32,5 +32,6 @@ The name **Schneiderlein** is derived from the fairytale »Das Tapfere Schneider
 
 ### 0.2.0
 * Extend interface with readable method names
+
 ### 0.1.0
 * Initial release
