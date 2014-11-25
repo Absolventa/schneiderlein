@@ -17,9 +17,11 @@ RSpec.describe Schneiderlein do
 
     it 'stores the exception message in a Rack variable' do
       request_json!
-      expect(request.env['rack.schneiderlein.parse_errors']).to be_a Array
-      expect(request.env['rack.schneiderlein.parse_errors'].size).to eql 1
-      expect(request.env['rack.schneiderlein.parse_errors'].first).to be_a ActionDispatch::ParamsParser::ParseError
+      stored = request.env['rack.schneiderlein.parse_errors']
+
+      expect(stored).to be_a Array
+      expect(stored.size).to eql 1
+      expect(stored.first).to be_a ActionDispatch::ParamsParser::ParseError
     end
 
     def request_json!(json = nil)
