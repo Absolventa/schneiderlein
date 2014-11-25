@@ -13,11 +13,11 @@ Add the gem to your Rails app's Gemfile. In your API controller, you may want to
 ```ruby
 class Api::BaseController < ApplicationController
   before_action :handle_parse_errors
-  
+
   respond_to :json, :xml
-  
+
   protected
-  
+
   def handle_parse_errors
     schneiderlein = Schneiderlein::Catch.new(request)
     respond_with schneiderlein.errors, status: 422 if schneiderlein.errors.any?
@@ -30,8 +30,5 @@ The name **Schneiderlein** is derived from the fairytale »Das Tapfere Schneider
 
 ## Changelog
 
-### 0.2.0
-* Extend interface with readable method names
-
-### 0.1.0
+### 1.0.0
 * Initial release

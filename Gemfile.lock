@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    schneiderlein (0.0.2)
+    schneiderlein (1.0.0)
       rails (>= 4.0.0, < 5.0)
 
 GEM
