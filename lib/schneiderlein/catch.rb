@@ -15,7 +15,10 @@ module Schneiderlein
     alias errors to_a
 
     def to_s
-      to_a.map(&:message).join ' '
+      to_a.map do |exc|
+        ExtractREXMLErrorMessage.new(exc).to_s
+      end.join(' ')
     end
+
   end
 end
