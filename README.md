@@ -30,5 +30,8 @@ The name **Schneiderlein** is derived from the fairytale »Das Tapfere Schneider
 
 ## Changelog
 
+### 1.1.0
+* compactified error message presentation  
+
 ### 1.0.0
 * Initial release
