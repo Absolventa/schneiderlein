@@ -1,10 +1,13 @@
 language: ruby
 rvm:
-  - '2.0.0'
-  - '2.1.0'
+- 2.0.0
+- 2.1.0
 gemfile:
-  - gemfiles/rails_4.0.gemfile
-  - gemfiles/rails_4.1.gemfile
+- gemfiles/rails_4.0.gemfile
+- gemfiles/rails_4.1.gemfile
 cache: bundler
 script:
-  - bundle exec rake spec
+- bundle exec rake spec
+notifications:
+  webhooks:
+    secure: eR/ObhgdCr0waefxdO2B5oH925FOzi5JTlrR3cPjhcIUHrJB/LPVMuuvoRGDdNG7jytyibhcucX4fyxhsbaA5SjJe97lWD1Lnz75XpTD9augIejviLWXnGF6T0FhvBk7F/Y733iowR1t5R95HAL1/zs9pDA9Cx+3nS/AnnjZBdY=
