@@ -1,6 +1,7 @@
 # Schneiderlein 
 [![Code Climate](https://codeclimate.com/github/Absolventa/schneiderlein/badges/gpa.svg)](https://codeclimate.com/github/Absolventa/schneiderlein)
-[![Build Status](https://travis-ci.org/Absolventa/schneiderlein.svg?branch=master)](https://travis-ci.org/Absolventa/schneiderlein)[![Gem Version](https://badge.fury.io/rb/schneiderlein.svg)](http://badge.fury.io/rb/schneiderlein)
+[![Build Status](https://travis-ci.org/Absolventa/schneiderlein.svg?branch=master)](https://travis-ci.org/Absolventa/schneiderlein)
+[![Gem Version](https://badge.fury.io/rb/schneiderlein.svg)](http://badge.fury.io/rb/schneiderlein)
 
 **Schneiderlein** is a Rack middleware to catch parse errors coming from [ActionDispatch::ParamsParser](https://github.com/rails/rails/blob/master/actionpack/lib/action_dispatch/middleware/params_parser.rb). Malformed XML presents a 500 Internal Server Error to your API consumer. It's hardly meaningful, should instead be in the 4xx range and most importantly: it's not helping.
 
