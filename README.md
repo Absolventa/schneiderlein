@@ -1,4 +1,4 @@
-# Schneiderlein 
+# Schneiderlein
 [![Code Climate](https://codeclimate.com/github/Absolventa/schneiderlein/badges/gpa.svg)](https://codeclimate.com/github/Absolventa/schneiderlein)
 [![Build Status](https://travis-ci.org/Absolventa/schneiderlein.svg?branch=master)](https://travis-ci.org/Absolventa/schneiderlein)
 [![Gem Version](https://badge.fury.io/rb/schneiderlein.svg)](http://badge.fury.io/rb/schneiderlein)
@@ -33,8 +33,13 @@ The name **Schneiderlein** is derived from the fairytale »Das Tapfere Schneider
 
 ## Changelog
 
+### 1.2.0
+* Supports Rails 5
+* Drops support for Rails < 4.2
+* Drops support for C-Ruby v2.0.x and v2.1.x
+
 ### 1.1.0
-* compactified error message presentation  
+* compactified error message presentation
 
 ### 1.0.0
 * Initial release
