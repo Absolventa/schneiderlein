@@ -33,6 +33,10 @@ The name **Schneiderlein** is derived from the fairytale »Das Tapfere Schneider
 
 ## Changelog
 
+### 1.3.0
+* Use `frozen_string_literal` magic comment
+* Remove autoload calls
+
 ### 1.2.0
 * Supports Rails 5
 * Drops support for Rails < 4.2
