@@ -1,7 +1,7 @@
 require "schneiderlein/engine"
+require "schneiderlein/fly_catcher"
+require "schneiderlein/catch"
+require "schneiderlein/extract_rexml_error_message"
 
 module Schneiderlein
-  autoload :FlyCatcher, 'schneiderlein/fly_catcher'
-  autoload :Catch, 'schneiderlein/catch'
-  autoload :ExtractREXMLErrorMessage, 'schneiderlein/extract_rexml_error_message'
 end
