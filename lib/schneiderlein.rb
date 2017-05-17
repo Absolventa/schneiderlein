@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require "schneiderlein/engine"
 require "schneiderlein/fly_catcher"
 require "schneiderlein/catch"

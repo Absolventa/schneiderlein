@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Schneiderlein
   class ExtractREXMLErrorMessage < Struct.new(:exception)
 
