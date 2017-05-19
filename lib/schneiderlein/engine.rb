@@ -11,7 +11,7 @@ module Schneiderlein
         # ActionDispatch::ParamsParser is not included in the middleware
         # stack anymore in Rails 5.
         app.config.middleware.insert_after \
-          'ActionDispatch::Callbacks', 'Schneiderlein::FlyCatcher'
+          ActionDispatch::Callbacks, Schneiderlein::FlyCatcher
       end
     end
   end
