@@ -33,6 +33,9 @@ The name **Schneiderlein** is derived from the fairytale »Das Tapfere Schneider
 
 ## Changelog
 
+### 1.3.1
+* Call middleware by their constants (fixes deprecation warning)
+
 ### 1.3.0
 * Use `frozen_string_literal` magic comment
 * Remove autoload calls
