@@ -1,7 +1,7 @@
 class FridayHugsController < ApplicationController
 
   def create
-    render text: params.inspect + "\n"
+    render json: params.to_json
   end
 
 end

@@ -21,12 +21,12 @@ RSpec.describe Schneiderlein do
 
       expect(stored).to be_a Array
       expect(stored.size).to eql 1
-      expect(stored.first).to be_a ActionDispatch::ParamsParser::ParseError
+      expect(stored.first).to be_a Schneiderlein::FlyCatcher::PARSE_ERROR_CONSTANT
     end
 
     def request_json!(json = nil)
       json ||= malformed
-      post "/friday_hugs", json, { 'Content-Type' => 'application/json' }
+      post "/friday_hugs", params: json.to_s, headers: { 'Content-Type' => 'application/json' }
     end
 
   end
