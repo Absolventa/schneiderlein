@@ -21,7 +21,7 @@ RSpec.describe Schneiderlein do
 
       expect(stored).to be_a Array
       expect(stored.size).to eql 1
-      expect(stored.first).to be_a ActionDispatch::ParamsParser::ParseError
+      expect(stored.first).to be_a ActionDispatch::Http::Parameters::ParseError
     end
 
     def request_json!(json = nil)
