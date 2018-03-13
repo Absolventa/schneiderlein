@@ -26,7 +26,7 @@ RSpec.describe Schneiderlein do
 
     def request_json!(json = nil)
       json ||= malformed
-      post "/friday_hugs", json, { 'Content-Type' => 'application/json' }
+      post "/friday_hugs", params: json.to_s, headers: { 'Content-Type' => 'application/json' }
     end
 
   end
