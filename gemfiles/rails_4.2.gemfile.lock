@@ -2,7 +2,7 @@ PATH
   remote: ..
   specs:
     schneiderlein (1.3.1)
-      rails (>= 4.2.0, < 5.1)
+      rails (>= 4.2.0, < 6.0)
 
 GEM
   remote: https://rubygems.org/
@@ -128,9 +128,9 @@ PLATFORMS
 DEPENDENCIES
   appraisal
   rails (~> 4.2.0)
-  rspec-rails (~> 3.5.0.beta1)
+  rspec-rails (~> 3.5.0)
   schneiderlein!
   sqlite3
 
 BUNDLED WITH
-   1.14.6
+   1.16.1
