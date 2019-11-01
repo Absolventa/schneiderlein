@@ -6,8 +6,8 @@ gemfile:
 - gemfiles/rails_5.2.gemfile
 - gemfiles/rails_6.0.gemfile
 cache: bundler
+before_install:
+  - gem update --system
+  - gem install bundler
 script:
 - bundle exec rake spec
-notifications:
-  webhooks:
-    secure: eR/ObhgdCr0waefxdO2B5oH925FOzi5JTlrR3cPjhcIUHrJB/LPVMuuvoRGDdNG7jytyibhcucX4fyxhsbaA5SjJe97lWD1Lnz75XpTD9augIejviLWXnGF6T0FhvBk7F/Y733iowR1t5R95HAL1/zs9pDA9Cx+3nS/AnnjZBdY=
