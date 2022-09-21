@@ -28,7 +28,7 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler: default
-          bundler-cache: true
+          bundler-cache: false
 
       - name: Run tests
         env:
