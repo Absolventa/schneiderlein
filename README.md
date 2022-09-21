@@ -33,6 +33,12 @@ The name **Schneiderlein** is derived from the fairytale »Das Tapfere Schneider
 
 ## Changelog
 
+### 4.0.0
+* Drop support for Rails below 6.1
+* Drop support for Ruby below 3.0
+* Add support for Rails 7.+
+* Switch from Travis CI to GitHub Actions
+
 ### 3.0.0
 * Drop support for Rails below 5.2
 * Add support for Rails 6.+
