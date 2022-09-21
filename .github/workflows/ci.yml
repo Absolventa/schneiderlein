@@ -34,4 +34,5 @@ jobs:
         env:
           RAILS_ENV: test
         run: |
+          bundle install --with development test
           bundle exec rspec spec
