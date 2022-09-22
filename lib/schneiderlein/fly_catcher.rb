@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 module Schneiderlein
   class FlyCatcher < Struct.new(:app)
 
