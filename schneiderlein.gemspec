@@ -7,8 +7,8 @@ require "schneiderlein/version"
 Gem::Specification.new do |s|
   s.name        = "schneiderlein"
   s.version     = Schneiderlein::VERSION
-  s.authors     = ["Carsten Zimmermann", "Robin Neumann"]
-  s.email       = ["cz@aegisnet.de", "robin.neumann@absolventa.de"]
+  s.authors     = ["Carsten Zimmermann", "Robin Neumann", "Daniel Schoppmann"]
+  s.email       = ["cz@aegisnet.de", "robin.neumann@absolventa.de", "daniel.schoppmann@gmail.com"]
   s.homepage    = "https://github.com/Absolventa/schneiderlein"
   s.summary     = "Rack middleware that rescues from ActionDispatch::ParamsParser"
   s.description = "Rescues from ActionDispatch::ParamsParser and continues in middleware stack"
@@ -16,11 +16,11 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  s.required_ruby_version = '>= 2.2.2'
+  s.required_ruby_version = '>= 3.0.0'
 
-  s.add_dependency "rails", ">= 5.2.0", "< 7.0"
+  s.add_dependency "rails", ">= 6.0.0", "< 8.0"
 
   s.add_development_dependency "appraisal"
   s.add_development_dependency "sqlite3"
-  s.add_development_dependency "rspec-rails", '~> 3.5.0'
+  s.add_development_dependency "rspec-rails", '~> 5.1.2'
 end

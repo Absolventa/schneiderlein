@@ -1,6 +1,5 @@
 # Schneiderlein
-[![Code Climate](https://codeclimate.com/github/Absolventa/schneiderlein/badges/gpa.svg)](https://codeclimate.com/github/Absolventa/schneiderlein)
-[![Build Status](https://travis-ci.org/Absolventa/schneiderlein.svg?branch=master)](https://travis-ci.org/Absolventa/schneiderlein)
+![Build Status](https://github.com/absolventa/schneiderlein/actions/workflows/ci.yml/badge.svg)
 [![Gem Version](https://badge.fury.io/rb/schneiderlein.svg)](http://badge.fury.io/rb/schneiderlein)
 
 **Schneiderlein** is a Rack middleware to catch parse errors coming from [ActionDispatch::ParamsParser](https://github.com/rails/rails/blob/master/actionpack/lib/action_dispatch/middleware/params_parser.rb). Malformed XML presents a 500 Internal Server Error to your API consumer. It's hardly meaningful, should instead be in the 4xx range and most importantly: it's not helping.
@@ -32,6 +31,12 @@ end
 The name **Schneiderlein** is derived from the fairytale »Das Tapfere Schneiderlein« (»The Valiant Little Tailor«) by the Grimm Brothers. The Valiant Little Tailor catches flies, **Schneiderlein** catches errors. Funny, eh?
 
 ## Changelog
+
+### 4.0.0
+* Drop support for Rails below 6.1
+* Drop support for Ruby below 3.0
+* Add support for Rails 7.+
+* Switch from Travis CI to GitHub Actions
 
 ### 3.0.0
 * Drop support for Rails below 5.2

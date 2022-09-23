@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 module Schneiderlein
   class Catch
     delegate :any?, :empty?, to: :errors
@@ -16,7 +15,7 @@ module Schneiderlein
     alias errors to_a
 
     def to_s
-      to_a.map do |exc|
+      to_a.dup.map do |exc|
         ExtractREXMLErrorMessage.new(exc).to_s
       end.join(' ')
     end

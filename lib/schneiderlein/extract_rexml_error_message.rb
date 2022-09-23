@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 module Schneiderlein
   class ExtractREXMLErrorMessage < Struct.new(:exception)
 
@@ -9,7 +8,10 @@ module Schneiderlein
     private
 
     def sanitizer(str)
-      str.to_s.gsub!('#<REXML::ParseException: ', '').to_s[0..str.to_s.index('Last').to_i-2]
+      string = str.to_s.dup
+      string = string.gsub('#<REXML::ParseException: ', '')
+      string = string.to_s[0..string.to_s.index('Last').to_i-2]
+      string
     end
 
   end
